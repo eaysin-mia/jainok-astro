@@ -1,0 +1,48 @@
+---
+import Breadcrumbs from '@/components/breadcrumbs.astro'
+import Link from '@/components/link.astro'
+import PageHead from '@/components/page-head.astro'
+import ProjectCard from '@/components/project-card.astro'
+import Layout from '@/layouts/layout.astro'
+import { getAllProjects } from '@/lib/data-utils'
+
+const projects = await getAllProjects()
+---
+
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title="About" />
+  <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
+
+  <section>
+    <div class="min-w-full">
+      <div class="prose mb-8">
+        <p class="mt-0">
+          I’m a Senior Full Stack Engineer based in Rajshahi, Bangladesh. I
+          build modern products that combine solid backend architecture,
+          practical frontend UX, automation, and real business workflows.
+        </p>
+        <p>
+          My recent work spans ERP systems, healthcare software, internal tools,
+          campaign management, reporting dashboards, and AI-powered knowledge
+          systems. I work primarily with JavaScript, TypeScript, React,
+          Next.js, Node.js, NestJS, MongoDB, PostgreSQL, Redis, Docker, and
+          RAG-style application workflows.
+        </p>
+        <p>
+          Before my current role at <Link
+            href="https://www.linkedin.com/in/meet-eaysin/"
+            external
+            underline>Next Level Media</Link
+          >, I worked at Blackrock IT Solutions and Excel Technologies, where I
+          delivered products across healthcare operations, scheduling, access
+          control, records management, and reporting.
+        </p>
+      </div>
+
+      <h2 class="mb-4 text-2xl font-medium">Selected Projects</h2>
+      <div class="flex flex-col gap-4">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</Layout>
