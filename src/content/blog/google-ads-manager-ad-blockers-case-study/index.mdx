@@ -1,0 +1,88 @@
+---
+title: 'Case Study: Google Ads Manager Feature Failing Due to Ad Blockers'
+description: 'A production Google Ads Manager feature failed for some users due to ad blocker extensions blocking API requests. Here is how I investigated and solved it.'
+date: 2026-01-02
+tags: ['Google Ads', 'Case Study', 'Troubleshooting']
+image: '../../../../public/static/twitter-card.png'
+authors: ['eaysin']
+---
+
+### Background
+I was working on extending a Google Ads Manager feature in my company’s product.
+The feature was already live in production and deeply integrated with Google Ads REST APIs.
+
+My responsibility was to enhance the feature and ensure it worked reliably across different devices and browsers.
+
+### Problem
+After some days in production, we noticed a strange issue:
+
+- Some users were automatically logged out
+- Some users could not use Google Ads features
+- The issue happened only on certain devices and browsers
+- Other devices worked perfectly
+- No backend, authentication, or API errors were found
+
+This made the issue difficult to understand at first.
+
+### Investigation
+I started debugging step by step:
+
+- Checked backend logs → no issues found
+- Verified Google Ads API responses → working correctly
+- Compared working and non-working devices
+- Monitored browser network requests
+
+That’s when I noticed something unusual:
+
+- On some devices, requests never reached the backend
+- The browser was blocking requests before sending them
+- Most affected users had Ad Blocker extensions installed
+
+### Root Cause
+Our client-side API routes started with this path: `google-ads-manager/...`
+
+Ad blockers detected this as an ads-related resource and blocked the requests automatically.
+
+Because of this:
+
+- Google Ads features failed
+- Users were logged out
+- Behavior differed across browsers and devices
+
+### Constraint
+The feature was fully integrated and already running in production.
+
+- Renaming API routes immediately was risky
+- It required large frontend and backend changes
+- We needed a safer and faster solution
+
+### Solution
+I searched for existing packages to detect ad blockers but couldn’t find any reliable option.
+
+So I:
+
+1. Built a custom lightweight detection library
+2. Detected when ad-related requests were blocked
+3. Showed a clear message to users
+4. Asked them to disable ad blockers for this feature
+
+This helped users understand the issue instead of thinking the app was broken.
+
+### Result
+- Users could access Google Ads features after disabling ad blockers
+- Reduced confusion and support tickets
+- Avoided risky production refactoring
+- Improved feature stability across devices and browsers
+
+### Key Learnings
+- **Avoid ad-related keywords in API or resource names:** Be mindful of paths that might trigger false positives.
+- **Ad blockers can break critical business features:** Not just ads, but genuine application features.
+- **Always test applications with browser extensions enabled:** Real-world usage is rarely a completely vanilla browser.
+- **Sometimes a user-facing solution is better than a large refactor:** Quick and clear communication can save immense engineering hours.
+- **Real-world issues often come from outside the codebase:** Never rule out environmental factors like an ad-blocker!
+
+### Final Note
+While working with Google Ads Manager and Google REST APIs, I faced many challenges.
+Google forums and email discussions were very helpful, and recently Google also launched a Discord channel, which is a great step for developer support.
+
+If you’re working with Google Ads APIs and facing similar issues, feel free to ask or share your experience.
