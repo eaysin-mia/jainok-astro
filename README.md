@@ -7,6 +7,7 @@ You can visit the live version of this site here: [Eaysin Mia](https://meet-eays
 ## 🚀 Overview
 
 This repository holds the code for my personal workspace. It features:
+
 - **Fast, Static Blog Performance:** Leveraging Astro's static site generation.
 - **Beautiful & Modern UI:** Styled utilizing Tailwind CSS and carefully selected shadcn/ui components.
 - **Content Heavy Features:** MDX support with LaTeX math rendering via KaTeX, code-block highlighting via Expressive Code.
@@ -24,20 +25,23 @@ This repository holds the code for my personal workspace. It features:
 
 ## 📦 Running Locally
 
-Want to run this locally to see how it works? 
+Want to run this locally to see how it works?
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/meet-eaysin/jainok-astro.git
    cd jainok-astro
    ```
 
 2. **Install dependencies:**
+
    ```bash
    yarn install
    ```
 
 3. **Start the development server:**
+
    ```bash
    yarn dev
    ```
@@ -46,9 +50,10 @@ Want to run this locally to see how it works?
 
 ## 💬 Let's Connect
 
-I am a Full Stack Engineer contributing to large-scale MERN products covering scheduling, reporting, ticketing, campaign management, and Google/Twilio API integrations. 
+I am a Full Stack Engineer contributing to large-scale MERN products covering scheduling, reporting, ticketing, campaign management, and Google/Twilio API integrations.
 
 Feel free to connect with me!
+
 - **GitHub:** [meet-eaysin](https://github.com/meet-eaysin)
 - **LinkedIn:** [Eaysin Mia](https://www.linkedin.com/in/meet-eaysin/)
 - **X/Twitter:** [@meet_eaysin](https://x.com/meet_eaysin)
@@ -58,6 +63,6 @@ Feel free to connect with me!
 
 ## 🌟 Credits & Acknowledgements
 
-This site was built on top of the wonderful **[astro-erudite](https://github.com/jktrn/astro-erudite)** open-source template created by **[enscribe (@jktrn)](https://enscribe.dev/)**. 
+This site was built on top of the wonderful **[astro-erudite](https://github.com/jktrn/astro-erudite)** open-source template created by **[enscribe (@jktrn)](https://enscribe.dev/)**.
 
 Huge thanks to enscribe for providing such an amazing foundation with Astro, Tailwind, and shadcn/ui. All credit for the original design, foundational boilerplate architecture, and initial logic goes to them. Their template provided a top-tier starting point for me to integrate my own content, branding, and layouts!
