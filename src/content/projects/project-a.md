@@ -1,7 +1,14 @@
 ---
-name: 'Recall'
-description: 'A personal AI knowledge engine built as a full-stack monorepo with AI-assisted search, chat, document ingestion, embeddings, transcripts, and modular worker-based processing.'
-tags: ['Next.js', 'NestJS', 'MongoDB', 'Redis', 'Qdrant', 'RAG', 'TypeScript']
+name: 'Recall – Personal AI Knowledge Engine'
+description: 'Full-stack AI knowledge workspace as a Turborepo monorepo with Next.js 16, NestJS 11, and automated document-processing pipelines for extraction, embeddings, and chat.'
+tags: [
+  'Next.js 16',
+  'NestJS 11',
+  'Qdrant',
+  'Vector Search',
+  'LLM Integration',
+  'Monorepo',
+]
 image: '../../../public/static/logo.png'
 link: 'https://github.com/meet-eaysin/recall'
 startDate: '2025-12-01'

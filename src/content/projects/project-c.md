@@ -1,7 +1,7 @@
 ---
 name: 'Hybrid Chart Evolve'
-description: 'A real-time healthcare scheduling and reporting platform where I led major reporting work and contributed across provider schedules, patient flow, census, permissions, and facility-level insights.'
-tags: ['React', 'Healthcare', 'Scheduling', 'Reporting', 'Permissions', 'Real-time']
+description: 'Real-time healthcare scheduling platform. Led the reporting module and provider scheduling system managing patient flow, census, and permissions across multiple US facilities.'
+tags: ['React', 'Healthcare', 'Reporting', 'Staff Scheduling', 'Staff Management']
 image: '../../../public/static/logo.png'
 link: 'https://www.linkedin.com/in/meet-eaysin/'
 startDate: '2024-03-01'

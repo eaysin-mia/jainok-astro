@@ -3,7 +3,7 @@ import type { IconMap, SocialLink, Site } from '@/types'
 export const SITE: Site = {
   title: 'Eaysin Mia',
   description:
-    'Full Stack Engineer building scalable web products, automation-heavy workflows, and AI-powered applications.',
+    'Full Stack Engineer specialized in ERP and Healthcare systems, building large-scale products with advanced API integrations.',
   href: 'https://meet-eaysin.vercel.app/',
   author: 'Eaysin Mia',
   locale: 'en-US',
