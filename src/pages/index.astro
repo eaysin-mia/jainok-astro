@@ -5,9 +5,11 @@ import PageHead from '@/components/page-head.astro'
 import { buttonVariants } from '@/components/ui/button'
 import { SITE } from '@/consts'
 import Layout from '@/layouts/layout.astro'
-import { getRecentPosts } from '@/lib/data-utils'
+import { getAllPosts, getRecentPosts } from '@/lib/data-utils'
 
+const allPosts = await getAllPosts()
 const blog = await getRecentPosts(SITE.featuredPostCount)
+const hasMorePosts = allPosts.length > SITE.featuredPostCount
 ---
 
 <Layout class="max-w-3xl">
@@ -57,16 +59,20 @@ const blog = await getRecentPosts(SITE.featuredPostCount)
         ))
       }
     </ul>
-    <div class="flex justify-center">
-      <Link
-        href="/blog"
-        class={buttonVariants({ variant: 'ghost' }) + ' group'}
-      >
-        See all posts <span
-          class="ml-1.5 transition-transform group-hover:translate-x-1"
-          >&rarr;</span
-        >
-      </Link>
-    </div>
+    {
+      hasMorePosts && (
+        <div class="flex justify-center">
+          <Link
+            href="/blog"
+            class={buttonVariants({ variant: 'ghost' }) + ' group'}
+          >
+            See all posts
+            <span class="ml-1.5 transition-transform group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </Link>
+        </div>
+      )
+    }
   </section>
 </Layout>

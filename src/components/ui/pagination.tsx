@@ -129,6 +129,8 @@ const PaginationComponent: React.FC<PaginationProps> = ({
   totalPages,
   baseUrl,
 }) => {
+  if (totalPages <= 1) return null
+
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
 
   const getPageUrl = (page: number) => {
