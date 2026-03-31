@@ -7,6 +7,30 @@ import Layout from '@/layouts/layout.astro'
 import { getAllProjects } from '@/lib/data-utils'
 
 const projects = await getAllProjects()
+
+const EXPERIENCE = [
+  {
+    company: 'Next Level Media',
+    role: 'Full Stack Engineer',
+    period: '04/2025 – Present',
+    description:
+      'Core contributor to *My Manager* ERP. Specifically responsible for Google Ads management via REST APIs, Twilio A2P 10DLC SMS automation, and employee scheduling systems. Implemented ticketing/seating from scratch and AI-powered dynamic reporting.',
+  },
+  {
+    company: 'Blackrock IT Solutions (US-Remote)',
+    role: 'Software Engineer',
+    period: '03/2024 – 12/2024',
+    description:
+      'Led the reporting module for *Hybrid Chart Evolve*. Developed healthcare provider scheduling systems managing patient flow, census, and permissions across multiple facilities.',
+  },
+  {
+    company: 'Excel Technologies Ltd',
+    role: 'Frontend Developer',
+    period: '01/2023 – 02/2024',
+    description:
+      'Focused on *SmartCare Pro*, a comprehensive medical record system for Zambian health facilities. Built specialized modules for ANC, treatment plans, and vital tracking.',
+  },
+]
 ---
 
 <Layout class="max-w-3xl">
@@ -32,37 +56,23 @@ const projects = await getAllProjects()
 
         <h3 class="text-xl font-medium mt-8 mb-4">Work Experience</h3>
         <ul class="list-none p-0 space-y-6">
-          <li>
-            <div class="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <span class="font-medium text-foreground">Next Level Media — Full Stack Engineer</span>
-              <span class="text-sm text-muted-foreground italic">04/2025 – Present</span>
-            </div>
-            <p class="text-sm text-muted-foreground leading-relaxed">
-              Core contributor to *My Manager* ERP. Specifically responsible for Google Ads management via REST APIs, 
-              Twilio A2P 10DLC SMS automation, and employee scheduling systems. Implemented ticketing/seating 
-              from scratch and AI-powered dynamic reporting.
-            </p>
-          </li>
-          <li>
-            <div class="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <span class="font-medium text-foreground">Blackrock IT Solutions (US-Remote) — Software Engineer</span>
-              <span class="text-sm text-muted-foreground italic">03/2024 – 12/2024</span>
-            </div>
-            <p class="text-sm text-muted-foreground leading-relaxed">
-              Led the reporting module for *Hybrid Chart Evolve*. Developed healthcare provider scheduling 
-              systems managing patient flow, census, and permissions across multiple facilities.
-            </p>
-          </li>
-          <li>
-            <div class="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <span class="font-medium text-foreground">Excel Technologies Ltd — Frontend Developer</span>
-              <span class="text-sm text-muted-foreground italic">01/2023 – 02/2024</span>
-            </div>
-            <p class="text-sm text-muted-foreground leading-relaxed">
-              Focused on *SmartCare Pro*, a comprehensive medical record system for Zambian health facilities. 
-              Built specialized modules for ANC, treatment plans, and vital tracking.
-            </p>
-          </li>
+          {
+            EXPERIENCE.map((job) => (
+              <li>
+                <div class="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
+                  <span class="font-medium text-foreground">
+                    {job.company} — {job.role}
+                  </span>
+                  <span class="text-sm text-muted-foreground">
+                    {job.period}
+                  </span>
+                </div>
+                <p class="text-sm text-muted-foreground leading-relaxed">
+                  {job.description}
+                </p>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
