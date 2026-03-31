@@ -3,13 +3,15 @@ import AuthorCard from '@/components/author-card.astro'
 import BlogCard from '@/components/blog-card.astro'
 import Link from '@/components/link.astro'
 import PageHead from '@/components/page-head.astro'
+import ProjectCard from '@/components/project-card.astro'
 import { buttonVariants } from '@/components/ui/button'
 import { SITE } from '@/consts'
 import Layout from '@/layouts/layout.astro'
-import { getAllPosts, getRecentPosts } from '@/lib/data-utils'
+import { getAllPosts, getAllProjects, getRecentPosts } from '@/lib/data-utils'
 import { getEntry } from 'astro:content'
 
 const author = await getEntry('authors', 'eaysin')
+const projects = await getAllProjects()
 const allPosts = await getAllPosts()
 const blog = await getRecentPosts(SITE.featuredPostCount)
 const hasMorePosts = allPosts.length > SITE.featuredPostCount
@@ -46,8 +48,9 @@ const hasMorePosts = allPosts.length > SITE.featuredPostCount
       </p>
     </div>
   </section>
+
   <section class="flex flex-col gap-y-4">
-    <h2 class="text-2xl font-medium">Latest posts</h2>
+    <h2 class="text-2xl font-medium">Latest blogs</h2>
     <ul class="flex flex-col gap-y-4">
       {
         blog.map((post) => (
@@ -64,7 +67,7 @@ const hasMorePosts = allPosts.length > SITE.featuredPostCount
             href="/blog"
             class={buttonVariants({ variant: 'ghost' }) + ' group'}
           >
-            See all posts
+            See all blogs
             <span class="ml-1.5 transition-transform group-hover:translate-x-1">
               &rarr;
             </span>
@@ -72,5 +75,29 @@ const hasMorePosts = allPosts.length > SITE.featuredPostCount
         </div>
       )
     }
+  </section>
+
+  <section class="flex flex-col gap-y-4">
+    <h2 class="text-2xl font-medium">Selected Projects</h2>
+    <ul class="flex flex-col gap-y-4">
+      {
+        projects.slice(0, 3).map((project) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex justify-center">
+      <Link
+        href="/about"
+        class={buttonVariants({ variant: 'ghost' }) + ' group'}
+      >
+        See more projects
+        <span class="ml-1.5 transition-transform group-hover:translate-x-1">
+          &rarr;
+        </span>
+      </Link>
+    </div>
   </section>
 </Layout>
