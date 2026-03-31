@@ -17,10 +17,6 @@ export const NAV_LINKS: SocialLink[] = [
     label: 'blog',
   },
   {
-    href: '/authors',
-    label: 'authors',
-  },
-  {
     href: '/about',
     label: 'about',
   },
@@ -50,7 +46,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     href: 'mailto:meet.eaysin@gmail.com',
     label: 'Email',
-  }
+  },
 ]
 
 export const ICON_MAP: IconMap = {

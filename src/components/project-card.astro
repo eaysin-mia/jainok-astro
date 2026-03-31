@@ -23,7 +23,7 @@ const { project } = Astro.props
   >
     {
       project.data.image && (
-        <div class="aspect-video w-full overflow-hidden rounded-lg bg-muted p-2 sm:max-w-3xs sm:shrink-0">
+        <div class="bg-muted aspect-video w-full overflow-hidden rounded-lg p-2 sm:max-w-3xs sm:shrink-0">
           <Image
             src={project.data.image}
             alt={project.data.name}

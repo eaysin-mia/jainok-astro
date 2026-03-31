@@ -79,11 +79,7 @@ const AvatarComponent: React.FC<AvatarComponentProps> = ({
   return (
     <Avatar className={className}>
       {showImage ? (
-        <AvatarImage
-          src={src}
-          alt={alt}
-          onError={() => setImageFailed(true)}
-        />
+        <AvatarImage src={src} alt={alt} onError={() => setImageFailed(true)} />
       ) : (
         <AvatarFallback>{fallback}</AvatarFallback>
       )}
