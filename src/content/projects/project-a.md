@@ -10,6 +10,6 @@ tags: [
   'Monorepo',
 ]
 image: '../../../public/static/logo.png'
-link: 'https://github.com/meet-eaysin/recall'
+link: 'https://github.com/eaysin-mia/recall'
 startDate: '2025-12-01'
 ---

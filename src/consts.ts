@@ -4,7 +4,7 @@ export const SITE: Site = {
   title: 'Eaysin Mia',
   description:
     'Full Stack Engineer specialized in ERP and Healthcare systems, building large-scale products with advanced API integrations.',
-  href: 'https://meet-eaysin.vercel.app/',
+  href: 'https://eaysin-mia.vercel.app/',
   author: 'Eaysin Mia',
   locale: 'en-US',
   featuredPostCount: 2,
@@ -24,16 +24,20 @@ export const NAV_LINKS: SocialLink[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: 'https://github.com/meet-eaysin',
+    href: 'https://github.com/eaysin-mia',
     label: 'GitHub',
   },
   {
-    href: 'https://www.linkedin.com/in/meet-eaysin/',
+    href: 'https://www.linkedin.com/in/eaysin-mia/',
     label: 'LinkedIn',
   },
   {
-    href: 'https://x.com/meet_eaysin',
+    href: 'https://x.com/eaysin_mia_',
     label: 'X/Twitter',
+  },
+  {
+    href: 'https://leetcode.com/u/eaysin-mia/',
+    label: 'LeetCode',
   },
   {
     href: 'https://web.facebook.com/meet.eaysin/',
