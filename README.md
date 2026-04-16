@@ -2,7 +2,7 @@
 
 Welcome to the open-source repository for my personal portfolio and blog! This project reflects my journey, projects, and insights as a Full Stack Engineer building scalable web products, automation-heavy workflows, and AI-powered applications.
 
-You can visit the live version of this site here: [Eaysin Mia](https://meet-eaysin.vercel.app/)
+You can visit the live version of this site here: [Eaysin Mia](https://imeaysin.vercel.app/)
 
 ## 🚀 Overview
 
@@ -30,7 +30,7 @@ Want to run this locally to see how it works?
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/meet-eaysin/jainok-astro.git
+   git clone https://github.com/imeaysin/jainok-astro.git
    cd jainok-astro
    ```
 
@@ -54,10 +54,10 @@ I am a Full Stack Engineer contributing to large-scale MERN products covering sc
 
 Feel free to connect with me!
 
-- **GitHub:** [meet-eaysin](https://github.com/meet-eaysin)
-- **LinkedIn:** [Eaysin Mia](https://www.linkedin.com/in/meet-eaysin/)
-- **X/Twitter:** [@meet_eaysin](https://x.com/meet_eaysin)
-- **Email:** [meet.eaysin@gmail.com](mailto:meet.eaysin@gmail.com)
+- **GitHub:** [imeaysin](https://github.com/imeaysin)
+- **LinkedIn:** [Eaysin Mia](https://www.linkedin.com/in/imeaysin/)
+- **X/Twitter:** [@imeaysin](https://x.com/imeaysin)
+- **Email:** [eaysin.dev@gmail.com](mailto:eaysin.dev@gmail.com)
 
 ---
 

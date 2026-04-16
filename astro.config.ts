@@ -20,7 +20,7 @@ import type { ExpressiveCodeTheme } from 'rehype-expressive-code'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  site: 'https://meet-eaysin.github.io/astro-erudite',
+  site: 'https://imeaysin.github.io/astro-erudite',
   integrations: [mdx(), react(), sitemap(), icon()],
   vite: {
     plugins: [tailwindcss()],
